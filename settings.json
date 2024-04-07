@@ -1,0 +1,10 @@
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "plaintext": "pug" 
+      },
+      "emmet.triggerExpansionOnTab": true,
+      "files.associations": {
+        "*.js": "javascriptreact"
+      }
+}
