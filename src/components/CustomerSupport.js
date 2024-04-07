@@ -5,7 +5,7 @@ function CustomerSupport() {
   return (
     <div className="text-white hidden md:block space-y-2">
       <p>Atendimento ao cliente</p>
-      <div className="flex hidden md:block space-y-3">
+      <div className="flex lg:space-x-2 max-sm:space-y-3">
         <div className="bg-custom-purple rounded-lg p-2">
           <p>0800 000 000</p>
         </div>
