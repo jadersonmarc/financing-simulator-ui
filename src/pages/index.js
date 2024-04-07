@@ -50,6 +50,6 @@ export async function getStaticProps() {
     props: {
       vehicles,
     },
-    revalidate: 3600, // Regenera a página a cada 1 hora
+    revalidate: 3600, 
   };
 }
