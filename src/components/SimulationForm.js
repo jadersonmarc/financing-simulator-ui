@@ -1,10 +1,17 @@
 import { useForm } from 'react-hook-form';
 
-function SimulationForm({ vehicles }) {
+function SimulationForm({ vehicles, onVehiclesSelected }) {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        console.log(data); };
+
+      const vehiclesSelected = vehicles.find(vehicle => vehicle.id === Number(data.selectOption));
+
+      if (onVehiclesSelected && vehiclesSelected) {
+        onVehiclesSelected(vehiclesSelected);
+      }
+  };
+
     return (
       <div className="bg-white m-8 p-8 rounded-md">
         <h3 className="text-left text-xl font-roboto font-bold leading-9">
