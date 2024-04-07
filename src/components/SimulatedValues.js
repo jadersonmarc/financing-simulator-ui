@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 function SimulatedValues({result}) {
-    console.log(result[0].installments)
     return (
         <div className="w-full lg:h-84 rounded overflow-hidden shadow-lg p-8 bg-white">
             <h2 className="font-bold mb-2">Valores Simulados para você</h2>
