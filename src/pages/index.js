@@ -1,16 +1,14 @@
 import Header from '../components/Header';
 import SimulationHeader from '../components/SimulationHeader';
 import SimulationForm from '../components/SimulationForm';
-import VehicleCard from '../components/VehicleCard';SimulatedValues
+import VehicleCard from '../components/VehicleCard';
 import SimulatedValues from '../components/SimulatedValues';
 import Footer from '../components/Footer';
 
 export default function Home() {
 
   return (
-    <main
-      className={`flex min-h-screen flex-col `}
-    >
+    <main className={`flex min-h-screen flex-col `}>
         <Header />
         <SimulationHeader />
         <SimulationForm />
@@ -21,7 +19,6 @@ export default function Home() {
       </div>
 
       <Footer />
-
     </main>
   );
 }
