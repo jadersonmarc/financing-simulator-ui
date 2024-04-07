@@ -6,7 +6,7 @@ function VehicleCard({vehicle}) {
     return (
         <div className="lg:w-72 h-84 rounded overflow-hidden shadow-lg bg-white">
             <div className="relative h-48">
-                <Image src="/carro.png" alt="Carro" layout="fill" objectFit="cover" className="pb-5" />
+                <Image src={vehicle.photo} alt="Carro" layout="fill" objectFit="cover" className="pb-5" />
             </div>
             <div className="px-4 pb-2">
                 <p className="font-semibold mb-2">{vehicle.brand}</p>
