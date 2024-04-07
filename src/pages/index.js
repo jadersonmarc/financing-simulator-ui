@@ -8,8 +8,8 @@ import Footer from '../components/Footer';
 import { fetchVehicles, fetchSimulation } from '../components/utils/api';
 
 
-export default function Home() {
-  const [vehicles, setVehicles] = useState([]);
+export default function Home({ vehicles }) {
+ 
   const [vehiclesSelected, setVehiclesSelected] = useState(null);
   const [simulationResult, setSimulationResult] = useState(null);
 
@@ -20,19 +20,6 @@ export default function Home() {
       setSimulationResult(response);
       
   };
-  
-    useEffect(() => {
-      const getVehicles = async () => {
-        try {
-          const response = await fetchVehicles();
-          setVehicles(response);
-        } catch (error) {
-          console.error("Erro ao buscar carros:", error);
-        }
-      };
-  
-      getVehicles();
-    }, []);
 
   return (
     <main className={`flex min-h-screen flex-col `}>
@@ -49,4 +36,20 @@ export default function Home() {
       <Footer />
     </main>
   );
+}
+
+export async function getStaticProps() {
+  let vehicles = [];
+  try {
+    vehicles = await fetchVehicles(); // Sua função que retorna a lista de veículos
+  } catch (error) {
+    console.error("Erro ao buscar carros:", error);
+  }
+
+  return {
+    props: {
+      vehicles,
+    },
+    revalidate: 3600, // Regenera a página a cada 1 hora
+  };
 }
