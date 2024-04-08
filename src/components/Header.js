@@ -8,7 +8,7 @@ function Header() {
         alt="Descrição da Imagem" 
         width={100} 
         height={30}
-        objectFit="cover"
+        style={{ objectFit: 'cover' }} 
       />
     </div>
   );
