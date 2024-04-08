@@ -1,5 +1,3 @@
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FooterSection from './FooterSection';
 import SocialMediaLinks from './SocialMediaLinks';
 import CustomerSupport from './CustomerSupport';
